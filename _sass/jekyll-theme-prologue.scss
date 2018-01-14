@@ -58,6 +58,12 @@
 		)
 	));
 
+/* QMED Computes */
+    .big-idea {
+        font-size: 125%; 
+        font-weight: light; 
+    }
+
 /* Basic */
 
 	body {
@@ -66,7 +72,7 @@
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: black;
 
 		&.is-loading * {
 			@include vendor('transition', 'none !important');
@@ -84,8 +90,8 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		color: #666;
-		line-height: 1.5em;
+		color: #aa5a5a;
+		line-height: 2em;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -129,7 +135,7 @@
 
 	a {
 		text-decoration: none;
-		color: inherit;
+        color: #3b3c8a;
 		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
 		@include vendor('transition', ('color 0.35s ease-in-out', 'border-bottom-color 0.35s ease-in-out'));
 		outline: 0;
@@ -188,7 +194,7 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 
 	dl {
@@ -1106,5 +1112,6 @@
 					}
 				}
 			}
+
 
 	}
