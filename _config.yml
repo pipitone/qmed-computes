@@ -40,8 +40,8 @@ email: jon@pipitone.ca
 avatar: assets/images/avatar.jpg
 
 # You'll want to customize baseurl for your own site:
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://jon.pipitone.ca" # the base hostname & protocol for your site
+baseurl: "/qmed-computes" # the subpath of your site, e.g. /blog
+url: "http://pipitone.github.io" # the base hostname & protocol for your site
 
 # Social settings
 facebook_url:
@@ -57,5 +57,5 @@ twitter_url:
 google_analytics:
 
 # The following settings are NECESSARY for the Prologue theme to run:
-theme: jekyll-theme-prologue
+remote_theme: chrisbobbe/jekyll-theme-prologue
 collections: [sections]
