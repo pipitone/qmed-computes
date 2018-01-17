@@ -17,8 +17,9 @@ Here are the big takeaways I'd like you to leave with:
     but the machine will not. Be vigilant and precise.
 
 - <span class="big-idea">Programming is a skill, craft, and an art.</span>  
-
-- <span class="big-idea">Be explicit. Talk to the duck.<span>  
+    TBD
+- <span class="big-idea">Be explicit.<span>  
+    TBD
 
 
 ## Learning objectives
@@ -32,6 +33,8 @@ Here are the big takeaways I'd like you to leave with:
 - memory (heap)
 
 ## Tasks
+
+TBD 
 
 ## Other resources 
 
