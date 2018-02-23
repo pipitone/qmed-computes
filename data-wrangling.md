@@ -55,7 +55,7 @@ Tasks
 In this workshop, we will be redoing some of the analysis we did in the
 [spreadsheets](spreadsheets.html) workshop. You can download CSV versions of
 the sheets here:
-- [vitals.csv](assets/workshop-data/data-wrangling/investigations.csv)
+- [vitals.csv](assets/workshop-data/data-wrangling/vitals.csv)
 - [investigations.csv](assets/workshop-data/data-wrangling/investigations.csv)
 
 You can also download this data directly from R using the following code: 
