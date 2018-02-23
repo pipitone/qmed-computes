@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Data Wrangling
-subtitle: Using R and dplyr to get your data in order
+subtitle: Using R and the dplyr package to get your data in order
 icon: fa-crop
 order: 4
 ---
@@ -15,8 +15,13 @@ Big Ideas
 Here are the big takeaways I’d like you to leave with from this
 workshop:
 
-- <span class="big-idea"></span>  
-  
+- <span class="big-idea">Automate. Don't manipulate data by hand.</span> `dplyr`
+  gives you functions ("verbs") to express how to manipulate your data in code.
+  This is repeatable, and precise. 
+
+- <span class="big-idea">Pipes: functions that transform data</span>. Seeing
+  functions a machines that take input, transform, and produce output is an
+  important paradigm in computing that will come up again and again.
 
 Learning objectives
 -------------------
@@ -24,7 +29,7 @@ Learning objectives
 - Review RStudio, and parts of the IDE: console, editor, heap
 - Review R variables and calling functions
 - Install and load libraries using `install.packages()`, `library()`
-- Learn about `tidyverse`, and what `dplyr` is for
+- Learn about [`tidyverse`](https://www.tidyverse.org/), and what `dplyr` is for
 - Load data using `read_csv()`
 - Add columns to a tibble using `mutate()`
 - Extract columns using `select()`
@@ -32,7 +37,7 @@ Learning objectives
 - Subset rows using `filter()`
 - Aggregate a dataset using `summarise()`
 - Aggregate by groups using `group_by()`
-- Merge tables using `inner_join()`
+- Merge tables using `inner_join()` and friends
 
 Tasks
 -----
@@ -62,8 +67,7 @@ download.file("https://pipitone.github.io/qmed-computes/assets/workshop-data/dat
     destfile="investigations.csv")
 ```
 
-In this workshop, we will follow the DataCamp lesson on `dplyr`:
-https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial
+In this workshop, we will follow the [DataCamp lesson on `dplyr`](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial).
 
 ### Introduction to dplyr and the tidyverse
 
@@ -108,12 +112,12 @@ Questions?
 1. Use `select()` to extract the columns starting with `participant_id` through
    to `diastolic` into a new variable `vitals`:
    ```r
-   vitals = select(vitals_csv, participant_id, age, sex, HR, oxygen_sat, RR, 
-                   temp, systolic, diastolic)
+   vitals = select(vitals_csv, participant_id, age, sex, HR, 
+                   oxygen_sat, RR, temp, systolic, diastolic)
   
    # here's a shortcut
    vitals = select(vitals_csv, participant_id:diastolic)
-
+   ```
 1. Explore the table stored in `vitals` and `vitals_csv` by just typing the
    variable names out on the console to display them, and also by using
    `head()`, `colnames()`, or the RStudio IDE
@@ -139,7 +143,7 @@ Questions?
 
 ### Filtering data
 
-1. Watch the [DataCamp video on `filter()](https://campus.datacamp.com/courses/dplyr-data-manipulation-r-tutorial/chapter-three-filter-and-arrange?ex=1) and do the four exercises that follow (everything up to `arrange()`). 
+1. Watch the [DataCamp video on `filter()`](https://campus.datacamp.com/courses/dplyr-data-manipulation-r-tutorial/chapter-three-filter-and-arrange?ex=1) and do the four exercises that follow (everything up to `arrange()`). 
 
 1. Practice using `filter()` to grab parts of the vitals dataset, e.g: 
     1. Find all subjects older than 65
@@ -219,7 +223,9 @@ Compute the average MAP for participants with uremia (urea > 7) by sex.
 
 -------
 
-## Answers
+
+Answers
+-------
 
 ### Pipes
 
@@ -251,3 +257,29 @@ read_csv('vitals.csv') %>%
     group_by(sex) %>%
     summarise(avg_MAP = mean(MAP))
 ```
+
+Resources
+---------
+
+- DataCamp's [Introduction to the
+  tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse?tap_a=5644-dce66f&tap_s=213362-c9f98c)
+  course.
+
+  The first chapter goes through the important parts of the `dplyr` verbs with
+  a different dataset.
+
+- Data Carpentry's lesson on [Manipulating and analysing data with
+  dplyr](http://www.datacarpentry.org/R-ecology-lesson/03-dplyr.html).
+  
+  This is another great walkthrough of dplyr that includes some other more
+  interesting features. 
+
+- [R for Data Science](http://r4ds.had.co.nz/)
+
+  This online book is a great and practical, analysis-focused resource for
+  learning dplyr and the rest of tidyverse, written by the person who
+  spearheaded the tidyverse itself. 
+
+- [tidyverse.org](https://www.tidyverse.org/learn). The website for the
+  tidyverse project has lots of good links out to resources to learn. 
+
