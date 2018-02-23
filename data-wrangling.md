@@ -124,7 +124,7 @@ Questions?
 
 ### Adding columns
 
-1. Watch the [DataCamp vidoe on `mutate()`](https://campus.datacamp.com/courses/dplyr-data-manipulation-r-tutorial/chapter-two-select-and-mutate?ex=6). 
+1. Watch the [DataCamp video on `mutate()`](https://campus.datacamp.com/courses/dplyr-data-manipulation-r-tutorial/chapter-two-select-and-mutate?ex=6). 
 
 1. Do the two exercises that follow the video only.
 
@@ -143,7 +143,7 @@ Questions?
 
 ### Filtering data
 
-1. Watch the [DataCamp video on `filter()`](https://campus.datacamp.com/courses/dplyr-data-manipulation-r-tutorial/chapter-three-filter-and-arrange?ex=1) and do the four exercises that follow (everything up to `arrange()`). 
+1. Watch the [DataCamp video on `filter()`](https://campus.datacamp.com/courses/dplyr-data-manipulation-r-tutorial/chapter-three-filter-and-arrange?ex=1) and do the three exercises that follow (everything up to `arrange()`). 
 
 1. Practice using `filter()` to grab parts of the vitals dataset, e.g: 
     1. Find all subjects older than 65
