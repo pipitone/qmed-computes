@@ -3,7 +3,7 @@ layout: page
 title: Data Wrangling
 subtitle: Using R and the dplyr package to get your data in order
 icon: fa-crop
-order: 4
+order: 6
 ---
 
 Workshop date: 2018-02-23  

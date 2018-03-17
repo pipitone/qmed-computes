@@ -3,7 +3,7 @@ layout: page
 title: Messy Data
 subtitle: Using OpenRefine to find and fix irregularities in your data
 icon: fa-trash-o
-order: 2
+order: 4
 ---
 
 Workshop date: 2017-12-06   

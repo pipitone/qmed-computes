@@ -3,7 +3,7 @@ layout: page
 title: Spreadsheets
 subtitle: Using spreadsheets effectively
 icon: fa-th
-order: 1
+order: 3
 ---
 
 Workshop date: 2017-11-17   

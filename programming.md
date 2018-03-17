@@ -3,7 +3,7 @@ layout: page
 title: Programming
 subtitle: A gentle introduction to programming using R
 icon: fa-code
-order: 3
+order: 5
 ---
 
 Workshop dates: 2018-01-19, 2018-01-24  
