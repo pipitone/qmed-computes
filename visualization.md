@@ -70,3 +70,19 @@ Tasks
         'https://pipitone.github.io/qmed-computes/assets/workshop-data/ggplot-timeseries.csv',
         destfile = 'data.csv')
     ```
+
+Resources 
+---------
+
+- [tidyverse documentation](https://www.tidyverse.org/packages/). This is the
+  source for the `dplyr` and `ggplot2` libraries, and good starting place to
+  learning how to use them and related libraries. In particular, check out [R
+  for Data Science](http://r4ds.had.co.nz/): a book for written by the author of
+  the tidyverse. 
+
+- [Data Carpentry's lesson on Data vis with
+  ggplot2](http://www.datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
+
+- [DataCamp's Data visualization with ggplot2
+  course, Part 1](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1)
+  There is a [part 2](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2)
