@@ -9,6 +9,9 @@ order: 7
 Workshop date: 2018-04-28  
 Author: Jon Pipitone, 2018
 
+This workshop is an interactive exploration of `ggplot`, the plotting library
+that is part of the `tidyverse`.
+
 Big Ideas
 ---------
 
@@ -70,6 +73,66 @@ Tasks
         'https://pipitone.github.io/qmed-computes/assets/workshop-data/ggplot-timeseries.csv',
         destfile = 'data.csv')
     ```
+
+Script
+------
+
+Since this workshop was interactive, there was no set of specific tasks to
+follow. Here's a script from one of the sessions that covers some of what we
+did: 
+
+
+```r
+
+install.packages('tidyverse')
+library(tidyverse)
+
+download.file(
+  url = 'https://pipitone.github.io/qmed-computes/assets/workshop-data/ggplot-timeseries.csv',
+  destfile = 'data.csv')
+
+# Review some data wrangling
+
+data = read_csv('data.csv')
+
+spo2_table = data %>% 
+  select(Time, SpO2)
+
+spo2_table = data %>% 
+  select(-Time)
+
+data2 = data %>% 
+  select(Time, HR, SpO2) %>%
+  filter(HR < 100) %>%
+  mutate(tachy = HR > 100, 
+         test = SpO2 / 100)
+
+write_csv(data2, 'data2.csv')
+
+# make a simple scatter/line plot
+data %>%
+  filter(HR < 120) %>%
+  ggplot(aes(x = Time, y = HR)) +
+    geom_line() + 
+    geom_point() +
+    labs(
+      title = "Title", 
+      subtitle = "subtitle", 
+      x = "Time (s)",
+      caption = "Source: David Wood"
+    ) + 
+    theme_minimal()
+
+# use gather() to rejig our data to make it possible to plot by measurement
+data %>%
+  mutate(tachy = HR > 100) %>%
+  gather(Measurement, Value, -Time, -tachy) %>%
+  ggplot(aes(x = Time, y = Value, colour = Measurement)) + 
+    geom_point() + 
+    geom_line() + 
+    facet_wrap(~ Measurement)
+
+```
 
 Resources 
 ---------
