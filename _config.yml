@@ -57,8 +57,11 @@ twitter_url:
 google_analytics:
 
 # ignore
-exclude: ['README.md', 'README_theme.md']
+exclude: ['README.md', 'README_theme.md', 'analysis/']
 
 # The following settings are NECESSARY for the Prologue theme to run:
 remote_theme: chrisbobbe/jekyll-theme-prologue
 collections: [sections]
+
+plugins:
+ - jekyll-feed
